@@ -1,26 +1,27 @@
 #include <stdio.h>
 
 int main(){
-    int decis;
+    int decis = 0;
     char wom=12;
     printf("\tUn Ditto salvaje ha aparecido\n");
     printf(" Adelante CHARMANDER!\n");
     printf("\nQue deberia de hacer CHARMANDER?\n");
-    printf("LUCHAR(1)\tMOCHILA(2)\nPOKEMON(3)\tHUIR\n");
+    printf("LUCHAR(1)\tMOCHILA(2)\nPOKEMON(3)\tHUIR(4)\n");
     printf("-->");
     scanf("%d",&decis);
-for (decis = 1; decis <= 9; decis++){    
+for (decis >= 0; decis <= 9; decis++){    
 do{
 if (decis==1)
 {
-    printf("\nARANiAZO(5)\t   -   \n   -   \t   -   \natras(9)\n");
+    printf("\nARANiAZO(8)\t   -   \n   -   \t   -   \natras(9)\n");
     printf("-->");
     scanf("%d",&decis);
-    if (decis==5)
+    if (decis==8)
     {
         printf("\nCHARMANDER ha usado PLACAJE\n");
         printf("\nDitto salvaje ha sido debilitado\n");
         printf("\nGanaste la pelea\n 235$\n");
+        return 0;
     }
     
 }if (decis==2)
@@ -33,59 +34,64 @@ if (decis==1)
     printf("\n'inicial'(5)\n\tatras(9)\n");
     printf("-->");
     scanf("%d",&decis);
-    if (decis==5)
-    {   
-        printf("\n-INFO. POKEMON-\tSIG.PAG(6) atras(3)\n");
-        printf("Nv.6 CHARMANDER %c\n", wom);
-        printf("-N°-\t006\n");
-        printf("-NOMBRE-\tCHARMANDER\n");
-        printf("-TIPO-\t-FUEGO-\n");
-        printf("-EO-\tRed\n");
-        printf("-N°ID-\t21830\n");
-        printf("-OBJETO-\tNO TIENE\n");
-        printf("-NOTAS ENTR.-\n");
-        printf("Naturaleza AMABLE. Conseguido\n");
-        printf("en PUEBLO PALETA con Nv. 5.\n");
-        printf("-->");
-        scanf("%d",&decis);
-    }   if(decis == 6)
-            {
-                printf("\n-HABIL. POKEMON-\tSIG.PAG(7) atras(3)\n");
-                printf("Nv.6 CHARMANDER %c\n", wom);
-                printf("-PS-\t 22/22\n");
-                printf("-ATAQUE-\t9\n");
-                printf("-DEFENSA-\t11\n");
-                printf("-AT.ESP.-\t12\n");
-                printf("-DEF.ESP.-\t12\n");
-                printf("-VELOCID.-\t14\n");
-                printf("-ESPERIENCIA-   PUNTOS EXP.\t205\n");
-                printf("              SIG.NIVEL\t31\n");
-                printf("-HABILIDAD-   MAR LLAMAS\n");
-                printf("Sube ataques tipo FUEGO.\n");
-                printf("-->");
-                scanf("%d",&decis);
-            }   if (decis == 7)
-                    {
-                        printf("\n-MOV. CONOCIDOS-\tPAG.ANTERIOR(6) atras(3)\n");
-                        printf("Nv.6 CHARMANDER %c\n", wom);
-                        printf("-NORMAL-  ARAÑAZO\n");
-                        printf("                pp35/35\n");
-                        printf("   -   \n");
-                        printf("   -   \n");
-                        printf("   -   \n");
-                        printf("-->");
-                        scanf("%d",&decis);
-                    }
+}if (decis==5)
+{   
+    printf("\n-INFO. POKEMON-");
+    printf("    SIG.PAG(6)\tatras(3)\n\n");
+    printf("Nv.6 CHARMANDER %c\n", wom);
+    printf("-N'-\t006\n");
+    printf("-NOMBRE-\tCHARMANDER\n");
+    printf("-TIPO-\t-FUEGO-\n");
+    printf("-EO-\tRed\n");
+    printf("-N'ID-\t21830\n");
+    printf("-OBJETO-\tNO TIENE\n");
+    printf("-NOTAS ENTR.-\n");
+    printf("Naturaleza AMABLE. Conseguido\n");
+    printf("en PUEBLO PALETA con Nv. 5.\n");
+    printf("-->");
+    scanf("%d",&decis);
+}if(decis == 6)
+{
+    printf("\n-HABIL. POKEMON-");
+    printf("    SIG.PAG(7)\tatras(3)\n");
+    printf("                    ");
+    printf("PAG.ANTERIOR(5)\n\n");
+    printf("Nv.6 CHARMANDER %c\n", wom);
+    printf("-PS-\t 22/22\n");
+    printf("-ATAQUE-\t9\n");
+    printf("-DEFENSA-\t11\n");
+    printf("-AT.ESP.-\t12\n");
+    printf("-DEF.ESP.-\t12\n");
+    printf("-VELOCID.-\t14\n");
+    printf("-ESPERIENCIA-   PUNTOS EXP.\t205\n");
+    printf("              SIG.NIVEL\t31\n");
+    printf("-HABILIDAD-   MAR LLAMAS\n");
+    printf("Sube ataques tipo FUEGO.\n");
+    printf("-->");
+    scanf("%d",&decis);
+}if (decis == 7)
+{
+    printf("\n-MOV. CONOCIDOS-");
+    printf("    PAG.ANTERIOR(6)\tatras(3)\n\n");
+    printf("Nv.6 CHARMANDER %c\n", wom);
+    printf("-NORMAL-  ARANIAZO\n");
+    printf("                pp35/35\n");
+    printf("   -   \n");
+    printf("   -   \n");
+    printf("   -   \n");
+    printf("-->");
+    scanf("%d",&decis);
 }if (decis==4)
 {
     printf("\n\tEscapaste exitosamente\n");
+    return 0;
 }
 }while (decis<9);
 do{
-    printf("\nLUCHAR(1)\tMOCHILA(2)\nPOKEMON(3)\tHUIR(4)\n");
+    printf("\nLUCHAR(0)\tMOCHILA(1)\nPOKEMON(2)\tHUIR(3)\n");
     printf("-->");
     scanf("%d",&decis);
-}while (decis == 9);
+}while (decis == 9 || decis < 0 || decis >9);
 }
     return 0;
 }
