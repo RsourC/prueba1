@@ -1,5 +1,5 @@
-#include <stdio.h>
 
+#include <stdio.h>
 int main(){
     int decis = 0;
     char wom=12;
@@ -10,9 +10,8 @@ int main(){
     printf("-->");
     scanf("%d",&decis);
 for (decis >= 0; decis <= 9; decis++){    
-do{
-if (decis==1)
-{
+while (decis == 1){
+
     printf("\nARANiAZO(8)\t   -   \n   -   \t   -   \natras(9)\n");
     printf("-->");
     scanf("%d",&decis);
@@ -23,18 +22,17 @@ if (decis==1)
         printf("\nGanaste la pelea\n 235$\n");
         return 0;
     }
-    
-}if (decis==2)
-{
+}
+while(decis == 2){
     printf("\n   -   \natras(9)\n");
     printf("-->");
     scanf("%d",&decis);
-}if (decis==3)
-{
+}
+while(decis == 3){
     printf("\n'inicial'(5)\n\tatras(9)\n");
     printf("-->");
     scanf("%d",&decis);
-}if (decis==5)
+    if (decis==5)
 {   
     printf("\n-INFO. POKEMON-");
     printf("    SIG.PAG(6)\tatras(3)\n\n");
@@ -81,12 +79,12 @@ if (decis==1)
     printf("   -   \n");
     printf("-->");
     scanf("%d",&decis);
-}if (decis==4)
-{
+}
+}
+while (decis == 4){
     printf("\n\tEscapaste exitosamente\n");
     return 0;
 }
-}while (decis<9);
 do{
     printf("\nLUCHAR(0)\tMOCHILA(1)\nPOKEMON(2)\tHUIR(3)\n");
     printf("-->");
